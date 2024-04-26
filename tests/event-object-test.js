@@ -334,7 +334,7 @@ buster.testCase('event object', {
           this.testKeyEvent('keypress', done)
         }
 
-        // see https://github.com/fat/bean/pull/61 & https://github.com/fat/bean/issues/76
+        // see https://github.com/brandon/bean/pull/61 & https://github.com/brandon/bean/issues/76
       , 'key events prefer "keyCode" rather than "which"': function (done) {
           var verifyEventObject = this.verifyEventObject
             , keyIgnorables = this.keyIgnorables

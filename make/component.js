@@ -8,6 +8,6 @@ fs.writeFileSync("component.json", JSON.stringify({
         keywords: packagejson.keywords,
         main: "bean.js",
         scripts: ["bean.js"],
-        repo: "https://github.com/fat/bean"
+        repo: "https://github.com/brandon/bean"
     }, null, 2)
 );

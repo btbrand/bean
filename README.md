@@ -43,7 +43,7 @@ bean.on(element, 'click', handler);
 // optional arguments passed to handler
 bean.on(element, 'click', function(e, o1, o2) {
   console.log(o1, o2);
-}, 'fat', 'ded');
+}, 'brandon', 'ded');
 
 // multiple events
 bean.on(element, 'keydown keyup', handler);
@@ -84,18 +84,18 @@ Bean supports namespacing your events. This makes it much easier to target the h
 To namespace an event just add a dot followed by your unique name identifier:
 
 ```js
-bean.on(element, 'click.fat.foo', fn);  // 1
+bean.on(element, 'click.brandon.foo', fn);  // 1
 bean.on(element, 'click.ded', fn);      // 2
 bean.on(element, 'click', fn);          // 3
 
 // later:
 bean.fire(element, 'click.ded');        // trigger 2
-bean.fire(element, 'click.fat');        // trigger 1
+bean.fire(element, 'click.brandon');        // trigger 1
 bean.off(element, 'click');             // remove 1, 2 & 3
 
 // fire() & off() match multiple namespaces with AND, not OR:
-bean.fire(element, 'click.fat.foo');    // trigger 1
-bean.off(element, 'click.fat.ded');     // remove nothing
+bean.fire(element, 'click.brandon.foo');    // trigger 1
+bean.off(element, 'click.brandon.ded');     // remove nothing
 ```
 
 **Notes**
@@ -346,9 +346,9 @@ Running `make` will assemble the *bean.js* file in the root of the repository. P
 
 ## Contributors
 
-  * [Jacob Thornton](https://github.com/fat/bean/commits/master?author=fat) ([GitHub](https://github.com/fat) - [Twitter](https://twitter.com/fat))
-  * [Rod Vagg](https://github.com/fat/bean/commits/master?author=rvagg) ([GitHub](https://github.com/rvagg) - [Twitter](https://twitter.com/rvagg))
-  * [Dustin Diaz](https://github.com/fat/bean/commits/master?author=ded) ([GitHub](https://github.com/ded) - [Twitter](https://twitter.com/ded))
+  * [Jacob Thornton](https://github.com/brandon/bean/commits/master?author=brandon) ([GitHub](https://github.com/brandon) - [Twitter](https://twitter.com/brandon))
+  * [Rod Vagg](https://github.com/brandon/bean/commits/master?author=rvagg) ([GitHub](https://github.com/rvagg) - [Twitter](https://twitter.com/rvagg))
+  * [Dustin Diaz](https://github.com/brandon/bean/commits/master?author=ded) ([GitHub](https://github.com/ded) - [Twitter](https://twitter.com/ded))
 
 Special thanks to:
 

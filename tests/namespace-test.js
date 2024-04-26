@@ -24,12 +24,12 @@ buster.testCase('namespaces', {
         }
       , 'on()': function (done) {
           this.runTest(done, function (el1, wrappedSpy) {
-            bean.on(el1, 'click.fat', wrappedSpy)
+            bean.on(el1, 'click.brandon', wrappedSpy)
           })
         }
       , 'add()': function (done) {
           this.runTest(done, function (el1, wrappedSpy) {
-            bean.add(el1, 'click.fat', wrappedSpy)
+            bean.add(el1, 'click.brandon', wrappedSpy)
           })
         }
     }
@@ -56,14 +56,14 @@ buster.testCase('namespaces', {
         }
       , 'on()': function (done) {
           this.runTest(done, function (el1, wrappedSpy1, wrappedSpy2) {
-            bean.on(el1, 'click.fat', wrappedSpy1)
-            bean.on(el1, 'click.fat', wrappedSpy2)
+            bean.on(el1, 'click.brandon', wrappedSpy1)
+            bean.on(el1, 'click.brandon', wrappedSpy2)
           })
         }
       , 'add()': function (done) {
           this.runTest(done, function (el1, wrappedSpy1, wrappedSpy2) {
-            bean.add(el1, 'click.fat', wrappedSpy1)
-            bean.add(el1, 'click.fat', wrappedSpy2)
+            bean.add(el1, 'click.brandon', wrappedSpy1)
+            bean.add(el1, 'click.brandon', wrappedSpy2)
           })
         }
     }
@@ -71,7 +71,7 @@ buster.testCase('namespaces', {
   , 'should be able to fire an event without handlers': function () {
       var el1 = this.byId('foo')
 
-      bean.fire(el1, 'click.fat')
+      bean.fire(el1, 'click.brandon')
 
       assert(true, 'fire namespaced event with no handlers (no exception)')
     }
@@ -93,18 +93,18 @@ buster.testCase('namespaces', {
 
             regFn(el1, trigger.wrap(spy1), trigger.wrap(spy2))
 
-            bean.fire(el1, 'click.fat')
+            bean.fire(el1, 'click.brandon')
           }
         }
       , 'on()': function (done) {
           this.runTest(done, function (el1, wrappedSpy1, wrappedSpy2) {
-            bean.on(el1, 'click.fat', wrappedSpy1)
+            bean.on(el1, 'click.brandon', wrappedSpy1)
             bean.on(el1, 'click', wrappedSpy2)
           })
         }
       , 'add()': function (done) {
           this.runTest(done, function (el1, wrappedSpy1, wrappedSpy2) {
-            bean.add(el1, 'click.fat', wrappedSpy1)
+            bean.add(el1, 'click.brandon', wrappedSpy1)
             bean.add(el1, 'click', wrappedSpy2)
           })
         }
@@ -122,7 +122,7 @@ buster.testCase('namespaces', {
 
             regFn(el1, spy1, spy2, spy3)
 
-            bean.fire(el1, 'click.fat.ded')
+            bean.fire(el1, 'click.brandon.ded')
 
             defer(function () {
               assert.equals(spy1.callCount, 0, 'should not trigger click event (namespaced)')
@@ -134,14 +134,14 @@ buster.testCase('namespaces', {
         }
       , 'on()': function (done) {
           this.runTest(done, function (el1, wrappedSpy1, wrappedSpy2, wrappedSpy3) {
-            bean.on(el1, 'click.fat', wrappedSpy1)
+            bean.on(el1, 'click.brandon', wrappedSpy1)
             bean.on(el1, 'click.ded', wrappedSpy2)
             bean.on(el1, 'click', wrappedSpy3)
           })
         }
       , 'add()': function (done) {
           this.runTest(done, function (el1, wrappedSpy1, wrappedSpy2, wrappedSpy3) {
-            bean.add(el1, 'click.fat', wrappedSpy1)
+            bean.add(el1, 'click.brandon', wrappedSpy1)
             bean.add(el1, 'click.ded', wrappedSpy2)
             bean.add(el1, 'click', wrappedSpy3)
           })
@@ -204,21 +204,21 @@ buster.testCase('namespaces', {
 
             regFn(el1, trigger.wrap(spy1), trigger.wrap(spy2), trigger.wrap(spy3))
 
-            bean.remove(el1, 'click.ded.fat')
+            bean.remove(el1, 'click.ded.brandon')
 
             Syn.click(el1)
           }
         }
       , 'on()': function (done) {
           this.runTest(done, function (el1, wrappedSpy1, wrappedSpy2, wrappedSpy3) {
-            bean.on(el1, 'click.fat', wrappedSpy1)
+            bean.on(el1, 'click.brandon', wrappedSpy1)
             bean.on(el1, 'click.ded', wrappedSpy2)
             bean.on(el1, 'click', wrappedSpy3)
           })
         }
       , 'add()': function (done) {
           this.runTest(done, function (el1, wrappedSpy1, wrappedSpy2, wrappedSpy3) {
-            bean.add(el1, 'click.fat', wrappedSpy1)
+            bean.add(el1, 'click.brandon', wrappedSpy1)
             bean.add(el1, 'click.ded', wrappedSpy2)
             bean.add(el1, 'click', wrappedSpy3)
           })
@@ -242,18 +242,18 @@ buster.testCase('namespaces', {
 
             regFn(el1, trigger.wrap(spy))
 
-            bean.fire(el1, 'fat.test1', ['1'])
-            bean.fire(el1, 'fat.test2', ['2'])
+            bean.fire(el1, 'brandon.test1', ['1'])
+            bean.fire(el1, 'brandon.test2', ['2'])
           }
         }
       , 'on()': function (done) {
           this.runTest(done, function (el1, wrappedSpy) {
-            bean.on(el1, 'fat.test1 fat.test2', wrappedSpy)
+            bean.on(el1, 'brandon.test1 brandon.test2', wrappedSpy)
           })
         }
       , 'add()': function (done) {
           this.runTest(done, function (el1, wrappedSpy) {
-            bean.add(el1, 'fat.test1 fat.test2', wrappedSpy)
+            bean.add(el1, 'brandon.test1 brandon.test2', wrappedSpy)
           })
         }
     }
@@ -277,19 +277,19 @@ buster.testCase('namespaces', {
 
             regFn(el1, trigger.wrap(spy))
 
-            bean.fire(el1, 'fat.test1', ['1'])
-            bean.fire(el1, 'fat.test2', ['2'])
-            bean.fire(el1, 'fat.foo', ['3'])
+            bean.fire(el1, 'brandon.test1', ['1'])
+            bean.fire(el1, 'brandon.test2', ['2'])
+            bean.fire(el1, 'brandon.foo', ['3'])
           }
         }
       , 'on()': function (done) {
           this.runTest(done, function (el1, wrappedSpy) {
-            bean.on(el1, 'fat.test1.foo fat.test2.foo', wrappedSpy)
+            bean.on(el1, 'brandon.test1.foo brandon.test2.foo', wrappedSpy)
           })
         }
       , 'add()': function (done) {
           this.runTest(done, function (el1, wrappedSpy) {
-            bean.add(el1, 'fat.test1.foo fat.test2.foo', wrappedSpy)
+            bean.add(el1, 'brandon.test1.foo brandon.test2.foo', wrappedSpy)
           })
         }
     }
@@ -313,18 +313,18 @@ buster.testCase('namespaces', {
 
             regFn(el1, trigger.wrap(spy))
 
-            bean.fire(el1, 'fat.test.foo', ['1'])
-            bean.fire(el1, 'fat.foo.test', ['2'])
+            bean.fire(el1, 'brandon.test.foo', ['1'])
+            bean.fire(el1, 'brandon.foo.test', ['2'])
           }
         }
       , 'on()': function (done) {
           this.runTest(done, function (el1, wrappedSpy) {
-            bean.on(el1, 'fat.test.foo fat.foo.test', wrappedSpy)
+            bean.on(el1, 'brandon.test.foo brandon.foo.test', wrappedSpy)
           })
         }
       , 'add()': function (done) {
           this.runTest(done, function (el1, wrappedSpy) {
-            bean.add(el1, 'fat.test.foo fat.foo.test', wrappedSpy)
+            bean.add(el1, 'brandon.test.foo brandon.foo.test', wrappedSpy)
           })
         }
     }
@@ -349,19 +349,19 @@ buster.testCase('namespaces', {
 
             regFn(el1, trigger.wrap(spy))
 
-            bean.fire(el1, 'fat.test.foo', ['1'])
-            bean.fire(el1, 'fat.foo.test', ['2'])
-            bean.fire(el1, 'fat.test.ded', ['3'])
+            bean.fire(el1, 'brandon.test.foo', ['1'])
+            bean.fire(el1, 'brandon.foo.test', ['2'])
+            bean.fire(el1, 'brandon.test.ded', ['3'])
           }
         }
       , 'on()': function (done) {
           this.runTest(done, function (el1, wrappedSpy) {
-            bean.on(el1, 'fat.test.foo.ded fat.foo.test fat.ded', wrappedSpy)
+            bean.on(el1, 'brandon.test.foo.ded brandon.foo.test brandon.ded', wrappedSpy)
           })
         }
       , 'add()': function (done) {
           this.runTest(done, function (el1, wrappedSpy) {
-            bean.add(el1, 'fat.test.foo.ded fat.foo.test fat.ded', wrappedSpy)
+            bean.add(el1, 'brandon.test.foo.ded brandon.foo.test brandon.ded', wrappedSpy)
           })
         }
     }

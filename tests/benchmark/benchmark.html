@@ -120,8 +120,8 @@
             , 'newbean': teardownElement.newbean
             , 'jquery':  teardownElement.jquery
             , 'nw':      function () {
-                           listeners = NW.Event.getRegistered(NW.Event.Listeners, element, 'fat', '*')
-                           for (j = 0; j < listeners.length; j++) NW.Event.unlisten(element, 'fat', listeners[j])
+                           listeners = NW.Event.getRegistered(NW.Event.Listeners, element, 'brandon', '*')
+                           for (j = 0; j < listeners.length; j++) NW.Event.unlisten(element, 'brandon', listeners[j])
                          }
           }
         , teardownUniqueElementsCustom = {
@@ -130,8 +130,8 @@
             , 'newbean': teardownUniqueElements.newbean
             , 'nw':      function() {
                            while (i--) {
-                             listeners = NW.Event.getRegistered(NW.Event.Listeners, elements[i], 'fat', '*')
-                             for (j = 0; j < listeners.length; j++) NW.Event.unlisten(elements[i], 'fat', listeners[j])
+                             listeners = NW.Event.getRegistered(NW.Event.Listeners, elements[i], 'brandon', '*')
+                             for (j = 0; j < listeners.length; j++) NW.Event.unlisten(elements[i], 'brandon', listeners[j])
                            }
                          }
             , 'jquery': teardownUniqueElements.jquery
@@ -139,39 +139,39 @@
 
       add( 'add( element, custom, fn )', setupElement
         , {
-              'bean04':  function () { bean04.add(element, 'fat', function () {}) }
-            , 'bean05':  function () { bean05.on(element, 'fat', function () {}) }
-            , 'newbean': function () { newbean.on(element, 'fat', function () {}) }
-            , 'nw':      function () { NW.Event.listen(element, 'fat', function () {}) }
-            , 'jquery':  function () { jQuery(element).on('fat', function () {}) }
+              'bean04':  function () { bean04.add(element, 'brandon', function () {}) }
+            , 'bean05':  function () { bean05.on(element, 'brandon', function () {}) }
+            , 'newbean': function () { newbean.on(element, 'brandon', function () {}) }
+            , 'nw':      function () { NW.Event.listen(element, 'brandon', function () {}) }
+            , 'jquery':  function () { jQuery(element).on('brandon', function () {}) }
           }
         , teardownElementCustom)
 
       add( 'add( unique element, custom, fn )', setupUniqueElements
         , {
-              'bean04':  function () { bean04.add(elements[i++], 'fat', function () {}) }
-            , 'bean05':  function () { bean05.on(elements[i++], 'fat', function () {}) }
-            , 'newbean': function () { newbean.on(elements[i++], 'fat', function () {}) }
-            , 'nw':      function () { NW.Event.listen(elements[i++], 'fat', function () {}) }
-            , 'jquery':  function () { jQuery(elements[i++]).on('fat', function () {}) }
+              'bean04':  function () { bean04.add(elements[i++], 'brandon', function () {}) }
+            , 'bean05':  function () { bean05.on(elements[i++], 'brandon', function () {}) }
+            , 'newbean': function () { newbean.on(elements[i++], 'brandon', function () {}) }
+            , 'nw':      function () { NW.Event.listen(elements[i++], 'brandon', function () {}) }
+            , 'jquery':  function () { jQuery(elements[i++]).on('brandon', function () {}) }
           }
         , teardownUniqueElementsCustom)
 
       add( 'add( element, event.namespace, fn )', setupElement
         , {
-              'bean04':  function () { bean04.add(element, 'click.fat', function () {}) }
-            , 'bean05':  function () { bean05.on(element, 'click.fat', function () {}) }
-            , 'newbean': function () { newbean.on(element, 'click.fat', function () {}) }
-            , 'jquery':  function () { jQuery(element).on('click.fat', function () {}) }
+              'bean04':  function () { bean04.add(element, 'click.brandon', function () {}) }
+            , 'bean05':  function () { bean05.on(element, 'click.brandon', function () {}) }
+            , 'newbean': function () { newbean.on(element, 'click.brandon', function () {}) }
+            , 'jquery':  function () { jQuery(element).on('click.brandon', function () {}) }
           }
         , teardownElement)
 
       add( 'add( unique element, event.namespace, fn )', setupUniqueElements
         , {
-              'bean04':  function () { bean04.add(elements[i++], 'click.fat', function () {}) }
-            , 'bean05':  function () { bean05.on(elements[i++], 'click.fat', function () {}) }
-            , 'newbean': function () { newbean.on(elements[i++], 'click.fat', function () {}) }
-            , 'jquery':  function () { jQuery(elements[i++]).on('click.fat', function () {}) }
+              'bean04':  function () { bean04.add(elements[i++], 'click.brandon', function () {}) }
+            , 'bean05':  function () { bean05.on(elements[i++], 'click.brandon', function () {}) }
+            , 'newbean': function () { newbean.on(elements[i++], 'click.brandon', function () {}) }
+            , 'jquery':  function () { jQuery(elements[i++]).on('click.brandon', function () {}) }
           }
         , teardownUniqueElements)
 
@@ -298,8 +298,8 @@
                            elements = []
                            while (i--) {
                              elements.push(element = document.createElement('div'))
-                             for (j = 10; j--;) bean.add(element, 'fat', function () {})
-                             bean.add(element, 'fat', fn)
+                             for (j = 10; j--;) bean.add(element, 'brandon', function () {})
+                             bean.add(element, 'brandon', fn)
                            }
                            i = 0
                          }
@@ -308,8 +308,8 @@
                            elements = []
                            while (i--) {
                              elements.push(element = document.createElement('div'))
-                             for (j = 10; j--;) newbean.on(element, 'fat', function () {})
-                             newbean.on(element, 'fat', fn)
+                             for (j = 10; j--;) newbean.on(element, 'brandon', function () {})
+                             newbean.on(element, 'brandon', fn)
                            }
                            i = 0
                          }
@@ -318,8 +318,8 @@
                            elements = []
                            while (i--) {
                              elements.push(element = document.createElement('div'))
-                             for (j = 10; j--;) NW.Event.listen(element, 'fat', function () {})
-                             NW.Event.listen(element, 'fat', fn)
+                             for (j = 10; j--;) NW.Event.listen(element, 'brandon', function () {})
+                             NW.Event.listen(element, 'brandon', fn)
                            }
                            i = 0
                          }
@@ -328,8 +328,8 @@
                            elements = []
                            while (i--) {
                              elements.push(element = document.createElement('div'))
-                             for (j = 10; j--;) jQuery(element).on('fat', function () {})
-                             jQuery(element).on('fat', fn)
+                             for (j = 10; j--;) jQuery(element).on('brandon', function () {})
+                             jQuery(element).on('brandon', fn)
                            }
                            i = 0
                          }
@@ -340,8 +340,8 @@
                            elements = []
                            while (i--) {
                              elements.push(element = document.createElement('div'))
-                             for (j = 10; j--;) bean.add(element, 'click.fat', function () {})
-                             bean.add(element, 'click.fat', fn)
+                             for (j = 10; j--;) bean.add(element, 'click.brandon', function () {})
+                             bean.add(element, 'click.brandon', fn)
                            }
                            i = 0
                          }
@@ -350,8 +350,8 @@
                            elements = []
                            while (i--) {
                              elements.push(element = document.createElement('div'))
-                             for (j = 10; j--;) newbean.on(element, 'click.fat', function () {})
-                             newbean.on(element, 'click.fat', fn)
+                             for (j = 10; j--;) newbean.on(element, 'click.brandon', function () {})
+                             newbean.on(element, 'click.brandon', fn)
                            }
                            i = 0
                          }
@@ -360,8 +360,8 @@
                            elements = []
                            while (i--) {
                              elements.push(element = document.createElement('div'))
-                             for (j = 10; j--;) jQuery(element).on('click.fat', function () {})
-                             jQuery(element).on('click.fat', fn)
+                             for (j = 10; j--;) jQuery(element).on('click.brandon', function () {})
+                             jQuery(element).on('click.brandon', fn)
                            }
                            i = 0
                          }
@@ -391,22 +391,22 @@
 
       add( 'remove( custom )', setupElementRemoveCustom
         , {
-              'bean':    function () { bean.remove(elements[i++], 'fat') }
-            , 'newbean': function () { newbean.remove(elements[i++], 'fat') }
+              'bean':    function () { bean.remove(elements[i++], 'brandon') }
+            , 'newbean': function () { newbean.remove(elements[i++], 'brandon') }
             , 'nw':      function () {
-                           listeners = NW.Event.getRegistered(NW.Event.Listeners, elements[i], 'fat', '*')
-                           for (j = 0; j < listeners.length; j++) NW.Event.unlisten(elements[i], 'fat', listeners[j])
+                           listeners = NW.Event.getRegistered(NW.Event.Listeners, elements[i], 'brandon', '*')
+                           for (j = 0; j < listeners.length; j++) NW.Event.unlisten(elements[i], 'brandon', listeners[j])
                            i++
                          }
-            , 'jquery':  function () { jQuery(elements[i++]).off('fat') }
+            , 'jquery':  function () { jQuery(elements[i++]).off('brandon') }
           }
         , teardownElementRemove)
 
       add( 'remove( namespace )', setupElementRemoveNamespace
         , {
-              'bean':    function () { bean.remove(elements[i++], '.fat') }
-            , 'newbean': function () { newbean.remove(elements[i++], '.fat') }
-            , 'jquery':  function () { jQuery(elements[i++]).off('.fat') }
+              'bean':    function () { bean.remove(elements[i++], '.brandon') }
+            , 'newbean': function () { newbean.remove(elements[i++], '.brandon') }
+            , 'jquery':  function () { jQuery(elements[i++]).off('.brandon') }
           }
         , teardownElementRemove)
 
@@ -518,11 +518,11 @@
           }
         // execute
         , {
-              'bean04':  function () { bean04.fire(element, 'fat') }
-            , 'bean05':  function () { bean05.fire(element, 'fat') }
-            , 'newbean': function () { newbean.fire(element, 'fat') }
-            , 'nw':      function () { NW.Event.dispatch(element, 'fat') }
-            , 'jquery':  function () { jQuery(element).trigger('fat') }
+              'bean04':  function () { bean04.fire(element, 'brandon') }
+            , 'bean05':  function () { bean05.fire(element, 'brandon') }
+            , 'newbean': function () { newbean.fire(element, 'brandon') }
+            , 'nw':      function () { NW.Event.dispatch(element, 'brandon') }
+            , 'jquery':  function () { jQuery(element).trigger('brandon') }
           }
         // teardown
         , {
@@ -530,10 +530,10 @@
             , 'bean05':  function () { bean05.remove(element) }
             , 'newbean': function () { newbean.remove(element) }
             , 'nw':      function () {
-                           listeners = NW.Event.getRegistered(NW.Event.Listeners, element, 'fat', '*')
-                           for (j = 0; j < listeners.length; j++) NW.Event.unlisten(element, 'fat', listeners[j])
+                           listeners = NW.Event.getRegistered(NW.Event.Listeners, element, 'brandon', '*')
+                           for (j = 0; j < listeners.length; j++) NW.Event.unlisten(element, 'brandon', listeners[j])
                          }
-            , 'jquery':  function () { jQuery(element).off('fat') }
+            , 'jquery':  function () { jQuery(element).off('brandon') }
           }
       )
 
@@ -543,38 +543,38 @@
               'bean04':  function () {
                            i = 20
                            element = document.createElement('div')
-                           while (i--) bean04.add(element, 'whatup.fat', function () {})
+                           while (i--) bean04.add(element, 'whatup.brandon', function () {})
                          }
             , 'bean05':  function () {
                            i = 20
                            element = document.createElement('div')
-                           while (i--) bean05.on(element, 'whatup.fat', function () {})
+                           while (i--) bean05.on(element, 'whatup.brandon', function () {})
                          }
             , 'newbean': function () {
                            i = 20
                            element = document.createElement('div')
-                           while (i--) newbean.on(element, 'whatup.fat', function () {})
+                           while (i--) newbean.on(element, 'whatup.brandon', function () {})
                          }
             // not sure jQuery can do the generic namespace fire
             //, 'jquery': function () {
             //               i = 20
             //               element = document.createElement('div')
-            //               while (i--) jQuery(element).on('whatup.fat', function () {})
+            //               while (i--) jQuery(element).on('whatup.brandon', function () {})
             //             }
           }
         // execute
         , {
-              'bean04':  function () { bean04.fire(element, '.fat') }
-             ,'bean05':  function () { bean05.fire(element, '.fat') }
-             ,'newbean': function () { newbean.fire(element, '.fat') }
-            // not sure jQuery can do this: , 'jquery':  function () { jQuery(element).trigger('.fat') }
+              'bean04':  function () { bean04.fire(element, '.brandon') }
+             ,'bean05':  function () { bean05.fire(element, '.brandon') }
+             ,'newbean': function () { newbean.fire(element, '.brandon') }
+            // not sure jQuery can do this: , 'jquery':  function () { jQuery(element).trigger('.brandon') }
           }
         // teardown
         , {
               'bean04':  function () { bean04.remove(element) }
             , 'bean05':  function () { bean05.remove(element) }
             , 'newbean': function () { newbean.remove(element) }
-            //, 'jquery':  function () { jQuery(element).off('.fat') }
+            //, 'jquery':  function () { jQuery(element).off('.brandon') }
           }
       )
 

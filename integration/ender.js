@@ -8,7 +8,7 @@
 
 /*!
   * Ender: open module JavaScript framework (client-lib)
-  * copyright Dustin Diaz & Jacob Thornton 2011-2012 (@ded @fat)
+  * copyright Dustin Diaz & Jacob Thornton 2011-2012 (@ded @brandon)
   * http://ender.no.de
   * License MIT
   */
@@ -1641,7 +1641,7 @@
         , elElems
 
       // check for existence of an event cloner
-      // preferably https://github.com/fat/bean
+      // preferably https://github.com/brandon/bean
       // otherwise Bonzo won't do this for you
       if (host.$ && typeof host.cloneEvents == 'function') {
         host.$(c).cloneEvents(el)
@@ -1917,7 +1917,7 @@
 
   /*!
     * bean.js - copyright Jacob Thornton 2011
-    * https://github.com/fat/bean
+    * https://github.com/brandon/bean
     * MIT License
     * special thanks to:
     * dean edwards: http://dean.edwards.name/

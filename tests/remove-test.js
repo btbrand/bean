@@ -246,10 +246,10 @@ buster.testCase('remove', {
       })
 
       bean.remove(el)
-      bean.add(el, 'fat.test1.foo.ded fat.test2.foo fat.test1.foo', trigger.wrap(spy))
-      bean.fire(el, 'fat.test1.ded', ['1'])
-      bean.fire(el, 'fat.test2', ['2'])
+      bean.add(el, 'brandon.test1.foo.ded brandon.test2.foo brandon.test1.foo', trigger.wrap(spy))
+      bean.fire(el, 'brandon.test1.ded', ['1'])
+      bean.fire(el, 'brandon.test2', ['2'])
       bean.remove(el, '.foo.ded')
-      bean.fire(el, 'fat.foo', ['3'])
+      bean.fire(el, 'brandon.foo', ['3'])
     }
 })

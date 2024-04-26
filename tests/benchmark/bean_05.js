@@ -1,6 +1,6 @@
 /*!
   * bean.js - copyright Jacob Thornton 2011
-  * https://github.com/fat/bean
+  * https://github.com/brandon/bean
   * MIT License
   * special thanks to:
   * dean edwards: http://dean.edwards.name/
